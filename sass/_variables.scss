@@ -1,0 +1,58 @@
+// Variables
+$principal-color: #fff;
+$variation-principal-color: rgba(255, 255, 255, 0.7);
+$secondary-color: #464547;
+$third-color: #666;
+$variation-second-color: rgba(255, 255, 255, 0.4);
+
+$background-principal-color: #eee;
+$principal-button-background: #55c2d8;
+$secondary-button-background: #39c2d7;
+
+// Fonts
+$font1: 'Source Sans Pro', 'sans-serif';
+$font2: 'Oswald', 'sans-serif';
+$font3: 'Oswald Regular', 'sans-serif';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+// Size
+$size-title: 4.8rem;
+$size-subtitle: 2.4rem;
+$size-logo: 2rem;
+$size-footer: 1.8rem;
+$size-text: 1.6rem;
+$size-link: 1.4rem;
+
+// Mixins
+@mixin font_color(
+	$color,
+	$font-family,
+	$font-weight,
+	$font-size,
+	$line-height,
+	$text-align: center,
+	$font-style: normal
+) {
+	color: $color;
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height; /* se usa para establecer la distancia entre líneas de texto*/
+	text-align: $text-align;
+	font-style: $font-style;
+}
+
+@mixin background_images($image, $size: cover, $repeat: no-repeat) {
+	background-image: url('#{$image}');
+	background-size: $size;
+	background-repeat: $repeat;
+}

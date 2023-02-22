@@ -1,0 +1,44 @@
+/* Header section */
+.nav {
+	position: absolute;
+	margin-top: 49px;
+	width: 100%;
+	display: grid;
+	grid-auto-columns: 1fr 2fr;
+	grid-auto-flow: column;
+	&__link {
+		text-decoration: none;
+	}
+	&__logo {
+		margin-left: 152px;
+		@include font_color($principal-color, $font1, 600, $size-logo, 16px, start);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+	&__lines {
+		display: none;
+	}
+	&__list {
+		display: flex;
+		.nav__item {
+			list-style: none;
+			margin-left: 32px;
+			.nav__link {
+				@include font_color(
+					$principal-color,
+					$font1,
+					400,
+					$size-link,
+					16px,
+					start
+				);
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+			}
+			.nav__link--active {
+				padding-bottom: 4px;
+				border-bottom: 2px solid $principal-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+.main__animation-points {
+	/* Adding sky animation*/
+	width: 95%;
+	height: 822px;
+	position: absolute;
+	@include background_images('../../assets/Frame_6_new.svg');
+	// background-image: url('../assets/Frame_6_new.svg');
+	animation-name: slide;
+	animation-duration: 6s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+.main__animation-stars {
+	width: 100%;
+	height: 822px;
+	position: absolute;
+	@include background_images('../../assets/Frame_28.svg');
+	// background-image: url('../assets/Frame_28.svg');
+	animation: opacity 4s linear both infinite;
+}
+@keyframes slide {
+	0% {
+		transform: translate();
+		opacity: 0.9;
+	}
+
+	10% {
+		opacity: 0.5;
+	}
+	50% {
+		transform: translateX(4%) scaleY(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: translate();
+		opacity: 0.5;
+	}
+}
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
